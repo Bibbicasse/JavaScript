@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - I 04 Introduction</title>
+                <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script JS dans l'en-tête  -->
+    <script src="introduction.js" async></script>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>JS - I 04 Introduction</h1>
+        <div id="bouton">
+            <button id="b1">Cliquez sur moi</button>
+            <button id="b2">Ajouter un paragraphe</button>
+        </div>
+        <br>
+        <div id="contenu">
+            <h2>la place du code et l'ordre d'exécution</h2>
+            <p>l'ordre d'exécution du code par le navigateur</p>
+            <p>Par défaut, un navigateur va lire et exécuter le code dans l'ordre de son écriture</p>
+            <p>Lorsque le navigateur arrive à un script, il va stopper le traitement du reste du HTML jusqu'à ce que le code JavaScript soit chargé dans la page et exécuté</p>
+            <p>Résumons ce qui ce passe dans ce cas</p>
+            <ol>
+                <li>Le navigateur commance à analyser (ou à traiter) le code HTML</li>
+                <li>Le navigateur rencontre un élément <code>script</code></li>
+                <li>Le contenu JS est demandé et téléchargé (si il est en externe) puis exécuté. Durant tout ce temps l'analyseur du navigateur bloque l'affichage du HTML ce qui peut ralentir, si le script est long, l'affichage de la page ;</li>
+                <li>Dès que le JS est exécuté, le contenu HTML est affiché</li>
+            </ol>
+            <p>ce soucis d'attente est résolu grâce au téléchargement asynchrone des données avec l'attribut <code>async</code> ou <code>defer</code> dans le cas où l'on fait appel à des fichier externe</p>
+            <h2>Le point virgule</h2>
+            <p>Le point virgule <code>;</code> est utilisé pour signifier la fin d'une instruction (une variable, une condition, une boucle etc.).</p>
+        </div>
+    </div>
+</body>
+</html>
