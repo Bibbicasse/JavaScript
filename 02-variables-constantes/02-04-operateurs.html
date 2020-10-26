@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - II 04 Opérateur Arithmétique</title>
+
+                <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+                    <!--Scipt en externe  -->
+    <script src="operateurs.js" async></script>
+</head>
+<body>
+    <div id="wrapper">
+            <h1>JS - II 04 Les opérateurs Arythmétique</h1>
+        <div id="contenu">
+            <h2>Qu'est-ce qu'un opérateur ?</h2>
+            <p>Un symbole qui va effectuer certaines opérations sur les variable et leurs valeurs.</p>
+            <p>Par ex. L'opérateur * va nous permettre de multiplier les valeurs de deux variable</p>
+
+            <ul>
+                <li>Les opérateurs Arithmétique</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr id="thbgc">
+                        <th>Opérateurs</th>
+                        <th>Nom de l'opération</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Soustraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>Modulo<sup>1</sup> </td>
+                        <td>%</td>
+                    </tr>
+                    <tr>
+                        <td>**<sup>2</sup></td>
+                        <td>Exponentielle</td>
+                    </tr>
+            </table>
+            <h3>Le Modulo et l'exponentielle</h3>
+            <dl>
+                <dt>Modulo<sup>1</sup></dt>
+                <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 ce qui donne 1 et reste 2: "le reste" est le modulo</dd>
+                <dt>L'exponentielle<sup>2</sup></dt>
+                <dd>L'exponentielle correspond à une puissance d'un même nombre : ex. 2<sup>3</sup></dd>
+            </dl>
+        </div>
+        <div id="contenu">
+            <h3>Priorité des calculs et utilisation des parenthèses</h3>
+            <p>Si on écrit <code>let h = 1 - 2 - 3;</code> le résultat est <code>-4</code> les opérations se font de gauche à droites</p>
+            <p>à l'exeption de l'élévation à la puissance qui sera calculée en partant de la fin, cf. la variable <code>J</code></p>
+        </div>
+        
+    </div> <!-- fin de wrapper -->
+</body>
+</html>

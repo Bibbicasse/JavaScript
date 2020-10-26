@@ -1,7 +1,7 @@
 /* Les styles du répo des cours et des exos JS - Giovinetti Colombbus  */
 
 body {
-    background-color: lightblue;
+    background-color: lightgrey;
     width: 100%;
 
 }
@@ -19,11 +19,12 @@ body {
     background-color: lightyellow;
     border: 5px solid red;
     border-radius: 20px;
+    margin: 15px 0;
     padding: 0 15px;
     text-align: justify;
 }
 .stabilo {
-    background-color: lightyellow;
+    background-color: yellow;
 }
 
 
@@ -70,5 +71,114 @@ h1 {
 
 h2 {
     text-decoration: underline red;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
 
+h3 {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline red;
+}
+
+            /* STYLE POUR LE TABLEAU  */
+
+table {
+    width: 50%;
+    border: 3px solid black;
+    margin: 0 auto 15px;
+}
+
+thead {
+    text-align: center;
+    font-size: 1.25em;
+
+}
+
+#thbgc {
+    background-color: red;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid red;
+}
+
+tr {
+    text-align: center;
+    font-size: 1.1em;
+    
+}
+
+td {
+    color: red;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+            /* STYLE MENU  */
+* {
+    box-sizing: border-box;
+}
+
+.niveau1 {
+    display: flex;
+    border: 5px solid red;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+.niveau1, .sousMenu {
+    width: 100%;
+}
+
+#menuDeroulant {
+    /* height:50px; */
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+#menuDeroulant nav {
+	width: 100%;
+	margin: 0 auto;
+	background: transparent;
+	
+}
+
+ #menuDeroulant nav ul li {
+	 list-style:none;
+	 width: 50%;
+	 /* float: left; */
+ }
+#menuDeroulant ul ul {
+	display: none;
+}
+
+#menuDeroulant nav ul li ul li {
+	width: 100%;
+}
+
+#menuDeroulant nav li {
+    background-color: lightyellow;
+}
+
+#menuDeroulant nav li a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+	padding: 4px 0 4px ;
+}
+
+#menuDeroulant nav ul li .niveau2 a:hover {
+    display: inliblock;
+    color:red;
+    font-weight: bold;
+    text-decoration:3px red underline;
+    padding: 4px 0 4px ;
+}
+
+#menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2 {
+	display: block;
 }

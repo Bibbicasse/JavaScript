@@ -41,3 +41,18 @@ console.log(nom)
 let ville;
 ville = 'Suresnes';
 console.log(ville);
+
+
+// Avec prompt() on a pas une fenêtre avec un champs de saisie
+//prompt();
+
+// Redéclaration des variable
+var chien ='Medor';
+var chien ='Max';
+
+console.log(chien)
+
+// Ceci ne fonctionnera pas 
+// let chat ='Minou'
+// let chat ='Obi-Wan'
+
