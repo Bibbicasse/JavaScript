@@ -20,15 +20,15 @@ console.log(f)
 console.log(g)
 
 
-alert (
-      'a contient :' + a +
-    '\nb contient :' + b +
-    '\nc contient :' + c +
-    '\nd contient :' + d +
-    '\ne contient :' + e +
-    '\nf contient :' + f +
-    '\ng contient :' + g 
-);
+// alert (
+//       'a contient :' + a +
+//     '\nb contient :' + b +
+//     '\nc contient :' + c +
+//     '\nd contient :' + d +
+//     '\ne contient :' + e +
+//     '\nf contient :' + f +
+//     '\ng contient :' + g 
+// );
 
 
 //PRIORITE DES CALCULES
@@ -47,10 +47,30 @@ console.log(l);
 let m = 1 -(2 * 3);
 console.log(1)
 
-alert (
-      'h contient :' + h +
-    '\nk contient :' + k +
-    '\nj contient :' + j +
-    '\nl contient :' + l + 
-    '\nm contient :' + m
-);
+// alert (
+//       'h contient :' + h +
+//     '\nk contient :' + k +
+//     '\nj contient :' + j +
+//     '\nl contient :' + l + 
+//     '\nm contient :' + m
+// );
+
+
+// Opérateur d'affectation dans le JS 
+// var chiffre1 = 5;
+let chiffre1 = 501;
+let chiffre2 = 18;
+let prenom= "Audrey";
+let somme = chiffre1 % chiffre2;
+
+console.log(somme)
+
+//console.log(prenom);
+//console.log(typeof chiffre1)
+let n = 20;
+let o = 50;
+n += 15; //on ajoute 15 à la valeur stocker
+console.log(n);
+
+o += 5;
+console.log(o);

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 Entrainement</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        /* h1, h2, h3, h4, h5, h6 {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        
+        p {
+            margin: 15px auto;
+            width: 900px;
+            text-align: left;
+        } */
+    </style>
+
+    <script>// script dans l'en-tête 
+        document.write('<h1> 01 Entrainement JS </h1>');
+        // TITRE 1 
+        document.write('<h2 style="background: orange;width:75%; color:#fff;"> 1 - Affichage </h2>')
+
+        var maBoite;
+        maBoite = 10;
+        let monAge = 12;
+        document.write('<p> Dans la variable, il y a '+ maBoite + '</p>')
+
+        console.log(maBoite);
+        console.log(monAge)
+
+        console.log('message dans le log.');
+        console.info('monAge')
+        
+
+        //boite alert()
+        // alert("Alert ! Ceci ! est un message d'alerte");
+
+        //Boite confirm()
+        // confirm('Confirmez-vous');
+
+        //Boite prompt()
+        // var sonChien = prompt("Quel est le prénom de votre chien ?");
+        // document.write("<p>Votre chien s'appelle " + sonChien + '.</p>');
+
+        // let humeur = prompt('Comment va ?');
+        // document.write('<p>Alors ? ça va ? ' + humeur + '</p>');
+
+        //portée locale ou globale de la variable !!!
+
+        // if(true){
+        //     let nombre = 9;
+        // }
+
+        // console.log(nombre);
+
+        let nombre2;
+        if(true) {
+            nombre2 = 18;
+        }
+        console.log(nombre2);
+
+        //addition de valeurs 
+        var fruits = 'pommes';
+        console.info(fruits);
+
+        fruits += ' - fraises';
+        console.info(fruits);
+        fruits += ' - mangues';
+        console.info(fruits);
+
+        document.write('<p>Dans mon panier j\'ai des ' + fruits + '</p>');
+        // addition d'une valeur numérique
+        var noteEval = 12;
+        console.log(noteEval);
+
+        noteEval += 2;
+        console.log(noteEval);
+
+        // TITRE 2 
+        document.write('<h2 style="background: orange;width:75%; color:#fff;"> 2 - Type de données </h2>');
+
+        var monTexte = 'Voici une phrase pour Audrey, avec l\' apostrophe';
+        console.info(typeof monTexte);
+
+        document.write(typeof noteEval + '<br>');
+        document.write(typeof monTexte + '<br>');
+
+        // TITRE 3 
+        document.write('<h2 style="background: orange;width:75%; color:#fff;"> 3 - Constantes </h2>');
+        const BOUGE_PAS  = "Ma constante impossible à modifier !";
+
+        document.write('<p style="background: grey;">' + BOUGE_PAS + '</p>');
+        // BOUGE_PAS = 'toto'; //Interdit de redéfinir une constante déjà déclarer
+
+        // TITRE 4
+        document.write('<h2 style="background: orange;width:75%; color:#fff; title="Le mot qui plait à Audrey !">4 - Concaténer </h2>');
+
+        let prenom = 'Chakie'; nom = 'Chan';
+        document.write(prenom + ' ' + nom);
+
+        // TITRE 5 
+        document.write('<h2 style="background: orange;width:75%; color:#fff; title=""> 5 - Opérateurs numériques </h2>');
+
+        // Addition
+        let addition = 10 + 15 + ' <code style="font-weight:bold;color:red;font-size:16px;font-style:italic;">(10 + 15)</code>';
+        document.write('<p> Une addition : ' + addition + '</p>');
+
+        let soustraction = 10 - 15 + ' <code style="font-weight:bold;color:red;font-size:16px;font-style:italic;">(10 - 15)</code>';
+        document.write('<p> Une soustraction : ' + soustraction + '</p>');
+
+        let division = 10 / 15 + ' <code style="font-weight:bold;color:red;font-size:16px;font-style:italic;">(10 / 15)</code>';
+        document.write('<p> Une division : ' + division + '</p>');
+
+        let multiplication = 10 * 15 + ' <code style="font-weight:bold;color:red;font-size:16px;font-style:italic;">(10 * 15)</code>';
+        document.write('<p> Une multiplication : ' + multiplication + '</p>');
+
+        //modulo
+         //Je partage 10 billes entre 3 personnes
+        let modulo = 10 % 3 + ' <code style="font-weight:bold;color:red;font-size:16px;font-style:italic;">(10 / 3 = 9 + 1 restant)</code>';
+        document.write('<p> Un modulo : ' + modulo + '</p>');
+
+        console.log(addition, soustraction, division, multiplication, modulo);
+
+        // EXO
+        document.write('<h3 style="background: orange;width:75%; color:#fff;">Un petit exercice dans un prompt() et une alert.</h3>');
+        
+        //CONSIGNE réaliser un prompt() demandent son âge à un utilisateur, récupérer cette donnée et l'utiliser pour afficher "vous avez XX ans"
+
+        // var ageUtilisateur = prompt("Quel âge avez-vous ?");
+        // document.write("<p>Vous avez " + ageUtilisateur + ' ans.</p>');
+
+        document.write('<h3 style="background: orange;width:75%; color:#fff;">Exo une valeur au cude et au carré</h3>');
+
+        //récupéré dans un prompt() une valeur donnée par un utilisateur
+        //Envoyé ensuite une alert() indiquand le résultat de cette valeur au cube puis au carré
+
+        // let numeroUtilisateur = prompt("Saisissez un nombre au hasard");
+
+        // alert("Vous avez choisi le " + numeroUtilisateur);
+        // alert("Le carré de " + numeroUtilisateur + " est de " + numeroUtilisateur**2 + "\nLe cube de " + numeroUtilisateur + " est de " + numeroUtilisateur**3);
+
+        // document.write("<p>Vous avez choisi " + numeroUtilisateur + "\nLe carré de " + numeroUtilisateur + " est de " + numeroUtilisateur**2 + "\nLe cube de " + numeroUtilisateur + " est de " + numeroUtilisateur**3);
+
+        let votreChiffre = prompt('Faisons un calcul, rentrez un chiffre ...');//Invitation avec le prompt() à saisir une valeur numérique dans la pop-up
+
+        // console.log('Le chiffre rentré par l\'utilisateur :' + votreChiffre); //1bis je vérifie que jusqu'à là ça fonctionne
+        // document.write('Le chiffre rentré par l\'utilisateur : ' + votreChiffre);
+
+        let auCarre = votreChiffre * votreChiffre //2- Je calcule le contenu de la variable de la variable *2
+        let auCube = votreChiffre * votreChiffre * votreChiffre ;//3- Je calcule le contenu de la variable de la variable au cube
+        console.log(auCarre, auCube);// Vérification des calculs
+
+        // alert('Vous avez saisi le chiffre : ' + votreChiffre + ' Ce chiffre au carré est égale à ' + auCarre) + '.'; //4 j'affiche dans 2 alert() les résultats des opérations
+        // alert('Vous avez saisi le chiffre : ' + votreChiffre + ' Ce chiffre au carré est égale à ' + auCube) + '.';
+
+        document.write('<h2 style="background: orange;width:50%;color:#fff;">6 - Les conditions</h2>')
+        
+        let a = 2, b = 2, c = 2;
+        //Si a est supérieur à b
+        //J'écris "A est supérieur b"
+        //Sinon j'écris "a n'(est pas supérieur à b"
+
+        if (a > b) {
+            document.write('<p>A est bien supérieur à B </p>');
+        } else {
+            alert('A n\'est pas supérieur à B ');
+        }
+
+        //Tester l'égalité de A et B
+        //puis montrer la valeur de a et b dans le document.write
+        if (a == b) {
+            document.write('<p>Pour a qui vaut '+ a + ' et b qui vaut ' + b + ' : a est bien égal à b </p>')
+        } else {
+            alert('Pour a qui vaut '+ a + ' et b qui vaut  ' + b + ' : a n\'est bien égal à b ')
+        }
+</script>
+    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - III 02 IF</title>
+
+                <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+                    <!--Scipt en externe  -->
+    <script src="if.js" async></script>
+</head>
+<body>
+    <h1>JS - III 02 IF</h1>
+    <div id="wrapper">
+        <h2>1 - If ...</h2>
+        <p>La condition <code>if</code> est l'une des plus utilisées et est également la plus simple à appréhender puisqu'elle va nous permettre <span class="stabilo">d'exécuter un bloc de code SI et SEULEMENT SI le résultat vaut <code>true</code></span></p>
+    </div>
+    <div id="contenu">
+        <ul>
+            <li><code>if(x > 1)<br> {alert ('x contient une valeur supérieure à 1');}</code></li>
+            <li><code>if(x == y)<br>{alert('x et y contiennent la même valeur');}</code></li>
+            <li><code>if(y)<br>{alert("La valeur de 'y' est évalué à true");}</code></li>
+            <p>/!\ dans ce 3<sup>ème</sup><code> if</code> : tout test d'une condition va être évalué dans un contexte booléan : donc à <code>true</code> à l'exeption des valeur suivantes qui vont être évaluée à <code>false</code> /!\.</p>
+        </ul>
+        <ul>
+            <li>Le booléen <code>false</code></li>
+            <li>La valeur <code>0</code></li>
+            <li>Une chaîne de caractère vide</li>
+            <li>La valeur  <code>null</code></li>
+            <li>La valeur <code>undefined</code></li>
+            <li>La valeur <code>NaN</code> (Not a Number)</li>
+        </ul>
+    </div>
+    <div id="contenu">
+        <h2>2 - Inverser la valeur logique d'un test</h2>
+        <p>Dans un <code>if</code>, le code placé dans le <code>if</code> n'est exécuté que si le résultat de la comparaison est <code>true</code></p>
+        <p>Dans certaines situaton, on préfère vérifier si la comaparaison est <code>false</code></p>
+        <p>On peut vérifier que c'est faux en comparant explicitement le résultat de la comparaison à <code>false</code></p>
+    </div>
+    </div> <!-- fin de wra"pper -->
+</body>
+</html>
