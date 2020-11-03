@@ -25,6 +25,17 @@
     </style>
 
     <script>// script dans l'en-tête 
+        /*
+        PAGE ENTRAINEMENT 
+        1- AFFICHAGE
+        2-TYPE DE DONNEES
+        3-CONSTANTES
+        4-CONCATENER
+        5-OPERATEUR NUMERIQUE
+        6-CONDITIONS
+
+        */
+        // 1- AFFICHAGE
         document.write('<h1> 01 Entrainement JS </h1>');
         // TITRE 1 
         document.write('<h2 style="background: orange;width:75%; color:#fff;"> 1 - Affichage </h2>')
@@ -85,7 +96,7 @@
         noteEval += 2;
         console.log(noteEval);
 
-        // TITRE 2 
+        //2-TYPE DE DONNEES
         document.write('<h2 style="background: orange;width:75%; color:#fff;"> 2 - Type de données </h2>');
 
         var monTexte = 'Voici une phrase pour Audrey, avec l\' apostrophe';
@@ -94,20 +105,23 @@
         document.write(typeof noteEval + '<br>');
         document.write(typeof monTexte + '<br>');
 
-        // TITRE 3 
+        // 3-CONSTANTES
+        
         document.write('<h2 style="background: orange;width:75%; color:#fff;"> 3 - Constantes </h2>');
         const BOUGE_PAS  = "Ma constante impossible à modifier !";
 
         document.write('<p style="background: grey;">' + BOUGE_PAS + '</p>');
         // BOUGE_PAS = 'toto'; //Interdit de redéfinir une constante déjà déclarer
 
-        // TITRE 4
+        // 4-CONCATENER
+         
         document.write('<h2 style="background: orange;width:75%; color:#fff; title="Le mot qui plait à Audrey !">4 - Concaténer </h2>');
 
         let prenom = 'Chakie'; nom = 'Chan';
         document.write(prenom + ' ' + nom);
 
-        // TITRE 5 
+        // 5-OPERATEUR NUMERIQUE
+        
         document.write('<h2 style="background: orange;width:75%; color:#fff; title=""> 5 - Opérateurs numériques </h2>');
 
         // Addition
@@ -162,6 +176,7 @@
         // alert('Vous avez saisi le chiffre : ' + votreChiffre + ' Ce chiffre au carré est égale à ' + auCarre) + '.'; //4 j'affiche dans 2 alert() les résultats des opérations
         // alert('Vous avez saisi le chiffre : ' + votreChiffre + ' Ce chiffre au carré est égale à ' + auCube) + '.';
 
+        // 6-CONDITIONS
         document.write('<h2 style="background: orange;width:50%;color:#fff;">6 - Les conditions</h2>');
         
         let a = 2, b = 2, c = 2;
@@ -224,6 +239,28 @@
             document.write('<p>Ici on teste si <code>a</code> qui vaut' + a + 'est supérieur à <code>b</code> qui vaut ' + b + 'ou si <code>b</code> est supérieur à <code>c</code> qui vaut ' + c + ' : dans ce cas aucune des deux conditon n\'est vraie. </p>')
         }
 
+        // EXO isNan ... is not a number 
+        var chiffre1 = 50, chiffre2 = '100', chiffre3 = 'vingt';
+
+        //faire le typeof() des var ci-dessus dans un console.info
+
+        console.info(
+            typeof chiffre1, 
+            typeof chiffre2, 
+            typeof chiffre3
+            );
+        if (isNaN(chiffre3)) {//si la variable testé n'est pas un nombre (dans le cas de chiffre2 qui est un string)
+            document.write('<p>Voyons voir chiffre 3 qui vaut ' + chiffre3 + ' ce n\'est pas un nombre !</p>'); //on excécute ce code
+        }
+
+        //inversion la condition is not a number isNaN
+
+        //si chiffre1 est un nombre (est-ce bien un nombre? !isNaN) Exécute le bloc de code suivant
+        if (!isNaN(chiffre1)) {//est-ce bien un nombre
+            document.write('<p>'+ chiffre1 +' est bien un nombre</p>');
+        } else {//sinon exécute celui-ci
+            document.write('<p>Au contraire : ' + chiffre1 + ' n\'est pas un nombre </p>');
+        }
 </script>
     
 </head>
