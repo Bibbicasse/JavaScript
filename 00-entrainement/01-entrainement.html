@@ -33,6 +33,7 @@
         4-CONCATENER
         5-OPERATEUR NUMERIQUE
         6-CONDITIONS
+        7-BOUCLES 
 
         */
         // 1- AFFICHAGE
@@ -261,10 +262,96 @@
         } else {//sinon exécute celui-ci
             document.write('<p>Au contraire : ' + chiffre1 + ' n\'est pas un nombre </p>');
         }
+
+        //EXO récupérer dans une variable la réponseà la question suivante : "Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée"
+
+        let saCouleurPref = prompt("Parmi ces couleurs, le vert, le bleu, le rouge, quelle est votre couleur préférée ?");
+
+        // console.log(saCouleurPref)
+
+        // 2- ensuite faite une condition pour afficher selon la réponse, votre couleur préféré est le vert ou le bleu, ou le rouge 
+
+        // if(saCouleurPref == 'vert'){
+        //     document.write('Votre Couleur préféré est ' + saCouleurPref+ '.' );
+
+        // }else if(saCouleurPref == 'bleu') {
+        //     document.write('Votre couleur préféré est le ' + saCouleurPref+ '.' );
+
+        // }else if(saCouleurPref == 'rouge') {
+        //     document.write('Votre couleur préféré est le ' + saCouleurPref + '.');
+        // }else{
+        //     alert('Vous devez rentrer une des couleurs suivante : vert, bleu ou rouge !');
+
+        //     let saCouleurPref = prompt("Parmi ces couleurs, le vert, le bleu, le rouge, quelle est votre couleur préférée ?");
+        // }
+
+switch(saCouleurPref) {//On va switcher sur la variable
+    case 'vert': //Un des "cas" possible ou une des "issues"
+        document.write('<p>Vous avez choisi le vert </p>');
+        break;// le break à ne pas oubler/ il sort du switch si le cas est vrai
+    case 'bleu':
+        document.write('<p>Vous avez choisi le bleu </p>');
+        break;// le break à ne pas oubler/ il sort du switch si le cas est vrai
+    case 'rouge':
+        document.write('<p>Vous avez choisi le rouge </p>');
+        break;// le break à ne pas oubler/ il sort du switch si le cas est vrai
+    
+    default:
+        alert('Veuillez choisir une couleur parmis celle proposez précédemment (vert, bleu, rouge)');
+}
+
+// 7 - BOUCLES  
+document.write('<h2 style="background: orange;width:50%;color:#fff;">7 - Boucles</h2>');
+
+// EXO boucle while tant que la var. w1 est inférieur ou égale à 15, écrivez w1 = x puis w1 = x+1 etc...
+
+
+let w1 = 0;
+while (w1 <= 10){
+    document.write('w1 est égale  ' + w1 + ' puis <br>' );
+    w1++;//Incrémentaiton après le bloc de code qui vient d'être exécuté
+}//fin de while boucle
+
+
+//EXO FOR var for1 = 0 et qui est <= 10
+document.write('<hr>');
+
+for (var for1 = 0; for1 < 10; for1++) {
+    //1 -Initialisation de la variable for1
+    //2 - test de la condition
+    //3 - Incrémentation
+    document.write(' La variable "for1" contient ' + for1 + ' puis <br> ' + (for1 + 1) + ' après incrémentation <br>');
+}
+
+// EXO une boucle for2 = 0 for2 <=10 et on écrit "la variable for2 contient X à chaque passage de la boucle "
+// 2 - avec if else terminez à la boucle ainsi "et la boucle se termine là"
+    document.write('<hr>');
+
+for (let for2 = 0; for2 <= 10; for2++) {// for et les 3 phases
+    if(for2==10){//test
+        document.write('La variable "for2" contient ' + for2 + ' à chaque passage de la boucle, <span class="stabilo">et là elle se termine !</span>');
+    } else {
+            document.write('La variable "for2" contient ' + for2 + ' à chaque passage de la boucle,<br>');
+        }//fin de if elss
+}//fin de for
+    
+
+document.write('<hr>');
+//AUTRE MANIERE DE FAIRE CETTE BOUCLE FOR
+for (for3 = 0; for3 <= 10; for3++){
+    if(for3 < 10){
+        document.write('<p>La variable for3 contient ' + for3 + ', incrémenté à chaque passage de la boucle : ' + for3 + ' + 1 = '+ (for3 + 1) +'.</p>');
+    }else{
+        document.write('<p>La variable for2 contient ' + for3 + ', la boucle s\'arrête ici.</p>');
+    } // fin de if else
+} // fin de for
+
+
+
 </script>
     
 </head>
 <body>
-    
+
 </body>
 </html>

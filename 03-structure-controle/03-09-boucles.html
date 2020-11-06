@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - III 09 Boucle</title>
+
+                <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+                    <!--Scipt en externe  -->
+    <script src="boucle.js" async></script>
+</head>
+<body>
+    <h1>JS - III 09 Boucles</h1>    
+    <div id="wrapper">
+       <div id="contenu">
+           <h2>1 - Présentation des boucles</h2>
+           <p>Les boucles vont nous permettre d'exécuter plusieurs fois un bloc de code, CAD d'exécuter un code en boucle tant qu'une conditon donnée est vérifiée : utiliser une boucle nous permet de n'écrire le code que l'on doit exécuter qu'une seule fois. </p>
+           <p>Il existe 6 boucles en JS :</p>
+           <ul>
+               <li>La boucle While "Tant que":</li>
+               <li>La boucle Do... While : "Faire... Tant que"</li>
+               <li>La boucle For : "Pour..."</li>
+               <li>La boucle For...in : "Pour...dans"</li>
+               <li>La boucle For... of : "Pour... parmi"</li>
+               <li>La boucle For... Await...Of : "Pour (en attente)& ... Parmi"</li>
+           </ul>
+
+           <p>Le fonctionnement général des boucles est toujours le même : on pose une condition qui sera généralement liée à la valeur d'une variable et on exécute le code de la boucle « en  boucle » tant que la condition est vérifiée. 
+            <br> 
+            Pour éviter de rester bloqué à l'infini dans une boucle, vous pouvez donc déjà noter qu'il  faudra que la condition donnée soit fausse à un moment donné (pour pouvoir sortir de la  boucle).
+            <br> 
+            Pour que notre condition devienne fausse à un moment, on pourra par exemple incrémenter ou décrémenter la valeur de notre variable à chaque nouveau passage dans la boucle (ou modifier la valeur de notre variable selon un certain schéma).</p>
+
+            <p>Les boucles vont donc être essentiellement composées de 3 choses :</p>
+            <ul>
+                <li>une valeur de départ qui sert à initialiser la boucle et qui servira de compteur</li>
+                <li>un test ou une condition de sortie qui précise le critère de sortie de la boucle</li>
+                <li>un "itérateur" qui va modifier la valeur de départ de la boucle à chaque passage de la boucle jusqu'à ce que la condition de sortie soit vérifiée. Pour cela on devra "incrémenter" la valeur de départ</li>
+            </ul>
+       </div>
+       <div id="contenu">
+           <h2>2 - Les opérateurs d'incrémentation & de décrémentation</h2>
+           <dl>
+               <dt>Incrémenter</dt>
+               <dd>Ajouter 1 à une valeur</dd>
+               <dt>Décrémenter</dt>
+               <dd>Enlever 1 à une valeur</dd>
+           </dl>
+
+           <table>
+            <thead>
+                <tr>
+                    <td>Exemple</td>
+                    <td>Résultat</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>++x</code></td>
+                    <td>Pré-incrémentation : incrémente la valeur contenue dans la variable x, puis retourne la valeur incrémentée</td>
+                </tr>
+                <tr>
+                    <td><code>x++</code></td>
+                    <td>Post-incrémentation : retourne la valeur contenue dans x avant incrémentation, puis incrémente la valeur de $x</td>
+                </tr>
+                <tr>
+                    <td><code>--x</code></td>
+                    <td>Pré-décrémentation : décrémente la valeur contenue dans la
+                        variable x, puis retourne la valeur décrémentée</td>
+                </tr>
+                <tr>
+                    <td><code>x--</code></td>
+                    <td>Post-décrémentation : retourne la valeur contenue dans x avant décrémentation, puis décrémente la valeur de $x</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Exemple : Incrémentation et décrémentation</h3>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+       </div>
+
+        <div id="contenu">
+            <h2>Une boucle while</h2>
+                <p>La boucle "while" = "tant que" en français va nous permettre de répéter une série d'instructions tant qu'une condition donnée est vraie, c'est-à-dire que la condition de sortie n'est pas vérifiée.</p>
+        <p id="while1"></p>
+        <p id="while2"></p>
+        </div>
+        <div id="contenu">
+            <h2>4 - La boucle do...while</h2>
+            <p>La Boucle do... while "faire... tant que" est relativement semblable à while, la différence réside dans l'ordre dans lequel vont se faire les opération <br>
+            on effectuera un premier passahe ans iune boucle do... while même si la condition de sortie n'est pas vérifié, donc le code</p>
+            <p id="while3"></p>
+        </div>
+
+  
+        
+    </div> <!-- fin de wrapper -->
+</body>
+</html>
