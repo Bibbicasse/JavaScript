@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - IV 03 Var et Let</title>
+
+                <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Scipt en externe  -->
+    <!-- assync permet de déférer le chargement de la page, c'est à dire qu'il va d'abord charger le html pour ensuite lancer la page du JS ce qui permet de trouver les ID dans la page -->
+    <script src="03-varlet.js" async></script>
+</head>
+<body>
+    <h1>JS - IV 03 Var et Let : Différences de portée</h1> 
+    <div id="wrapper">
+       <div id="contenu">
+           <h2>1 - Var et Let</h2>
+           <ul>
+               <li><code>let</code> aura une porté de bloc</li>
+               <li><code>var</code> aura une proté élargie</li>
+           </ul>
+
+           <h3>Exemple</h3>
+           <p id="p1"></p>
+           <p id="p2"></p>
+           <p id="p3"></p>
+           <p id="p4"></p>
+           
+       </div>
+    </div> <!-- fin de wrapper -->
+</body>
+</html>

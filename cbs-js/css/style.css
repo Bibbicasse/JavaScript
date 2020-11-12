@@ -99,3 +99,96 @@ body {
     font-size: 0.8em;
     color: grey;
   }
+
+
+
+
+                    /* Menu Nav */
+  #menu nav {
+    background: transparent;
+    border: none;
+  }
+
+  #menu nav ul li ul a {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #menu ul {
+    list-style:none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #menu ul li {
+    display: inline-block;
+    font-size: 12px;
+  }
+  
+  #menu nav a {
+    /* padding: 10px; */
+    color:#c7c7c7;
+    text-decoration:none;
+    background: #444444;
+    /* transition: 0.5s ease-in; */
+  }
+  
+  #menu nav a:hover {
+    /* box-shadow: none; */
+    text-shadow: 1px 5px 10px black;
+    box-shadow:0px 0px 10px 3px #f7bd1e;
+    color: #f7bd1e;
+  }
+  
+      /* le menu avec les menu déroulant  */
+      /* position: relative;
+      z-index: 1000; */
+    
+  #menuDeroulant {
+    /* height: 200px; */
+    margin: 0 auto;
+  }
+  
+  #menuDeroulant nav {
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+  }
+  
+   #menuDeroulant nav ul li {
+     list-style:none;
+     width: 20%;
+     /* float: left; */
+   }
+  #menuDeroulant ul ul {
+    display: none;
+  }
+  
+  #menuDeroulant nav ul li ul li {
+    border-top:1px solid #464646;
+    width: 100%;
+  }
+  
+  #menuDeroulant .niveau1 ul {
+    height: 150px;    
+    padding: 0;
+  }
+  
+  #menuDeroulant nav li a {
+    display: block;
+    padding: 4px 0 4px ;
+    height: 25px;
+  }
+  
+  #menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2 {
+    display: block;
+  }
+  
+ ul.niveau2 {
+    padding: 0;
+  }
+  
+          /* Fin des style des liens */

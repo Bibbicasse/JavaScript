@@ -188,7 +188,7 @@
         if (a > b) {
             document.write('<p>A est bien supérieur à B </p>');
         } else {
-            alert('A n\'est pas supérieur à B ');
+            // alert('A n\'est pas supérieur à B ');
         }
 
         //Tester l'égalité de A et B
@@ -206,7 +206,7 @@
             document.write('<p>Pour a qui vaut '+ a + ' et b qui vaut ' + b + ' : a est bien égal à b en contenu et en type </p>');
 
         } else {
-            alert('Pour a qui vaut '+ a + ' et b qui vaut  ' + b + ' : a n\'est bien égal à b en contenu et en type ');
+            // alert('Pour a qui vaut '+ a + ' et b qui vaut  ' + b + ' : a n\'est bien égal à b en contenu et en type ');
         }
 
 
@@ -296,8 +296,8 @@ switch(saCouleurPref) {//On va switcher sur la variable
         document.write('<p>Vous avez choisi le rouge </p>');
         break;// le break à ne pas oubler/ il sort du switch si le cas est vrai
     
-    default:
-        alert('Veuillez choisir une couleur parmis celle proposez précédemment (vert, bleu, rouge)');
+    // default:
+    //     alert('Veuillez choisir une couleur parmis celle proposez précédemment (vert, bleu, rouge)');
 }
 
 // 7 - BOUCLES  
@@ -347,6 +347,194 @@ for (for3 = 0; for3 <= 10; for3++){
 } // fin de for
 
 
+
+document.write('<hr>')
+
+
+//8 - FONCTIONS PREDEFINIES ET UTILISATEUR
+
+document.write('<h2 style="background: orange;width:50%;color:#fff;">8 - Fonctions</h2>');
+
+var phrase1 = "ne criez pas s'il vout plait !";
+
+document.write('<hr>')
+
+//toUpperCase()
+console.log(phrase1.toUpperCase());
+
+document.write(phrase1.toUpperCase());
+
+//length compte le nombre de caractère dans une chaîne
+
+var phrase3 = 'My name is Bond, James Bond.';
+console.log(phrase3.length);
+
+document.write('Test dans la phrase suivante <span class="stabilo"> : ' + phrase3 + '</span> il y a ' + phrase3.length + ' caractères.');
+
+document.write('<hr>')
+
+//création d'une fonction
+
+function maFonction () {
+    return document.write('<p class="stabilo">Il fait beau !</p>')
+}
+
+maFonction();//ici on appelle la fonction
+
+function uneAlerte () {
+    return alert('Coucou les amis')
+}
+
+// uneAlerte();
+
+function direBonjour(prenom) {
+    var message = document.write('<p>Bonjour ' + prenom + '. Comment vas-tu ? </p>');
+    return message;
+}
+
+direBonjour('Toto');
+var prenom2 = prompt('Quel est ton prénom ?');//On passe en variable le résultat du prompt()
+
+function faireCoucou(prenom2) {
+    var message = document.write('<p>Coucou ' + prenom2 + '. Comment vas-tu ? </p>');//Une variable dabs cette fonction
+    return faireCoucou; //Envoie la variable
+    }
+
+faireCoucou(prenom2);//appel de fonction avec l'argument
+
+
+document.write('<hr>')
+
+//Exo > demandez 'Quelle est la saison ?' et "quelle est la température ?" et faites une fonction méteo()
+
+var saison = prompt ('Quelle est la saison s\'il vous plait')
+var temp = prompt('Quelle est la température s\'il vous plait ?')
+
+// console.log(saison, temp);
+
+
+//VERSION 1
+//AVEC DOCUMENT WRITE SIMPLE (IF ELSE)
+function meteo1(saison, temp) {//Notre fonction avec 2 arguments qui viennent des var ci-dessus
+    if (saison == 'printemps') {
+        var phrase4 = document.write('<p>1 - Nous sommes au ' + saison + ' et il fait ' + temp + ' °C</p>');
+    return phrase4;
+    } else {
+        var phrase4 = document.write('<p>1 - Nous sommes en ' + saison + ' et il fait ' + temp + ' °C</p>');
+}
+}
+meteo1(saison, temp)
+
+
+// VERSION 2 
+function  meteo2(saison,temp ){// notre fonction contients deux arguments
+    var temperatureDuMoment = document.write('<br>2 -  Nous sommes en ' + saison + ' et il fait ' + temp +  ' °C à l\'extérieur');
+    return temperatureDuMoment
+}
+//get meteo fonction
+meteo2(saison, temp)
+
+
+//VERSION 3 AVEC UNE VARIABLE "ARTICLE"
+// meteo3(saison, temp);
+
+function meteo3(saison, temp){
+    var article; // la variable article est vide et attend une condition
+    if(saison == 'printemps'){// la condition
+        article = ' au '; // on affecte "au" à la variable article
+    }else{
+        article = ' en '; // on affecte "en" à la variable article
+    }// fin de if ...else...
+    return(document.write('<p>3 - Nous sommes ' + article + saison + ' et la température est de ' + temp + '°C</p>'));
+}
+meteo3(saison, temp);
+
+
+//VERSION 4 - l'utilisateur rentre printemps très bien // hiver autom été très bien et s'il rentre n'importe quoi on lui dit 'cette saison n'existe pas'
+
+//en utilsant la fonction replace() ;
+
+
+// if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+//     document.write('<p>2- Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+// } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon (c'est faux il n'y a pas printemps)
+//     document.write('<p>2- Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+// } else {
+//     document.write('<p>La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+// }
+// 4ème version function 
+function meteoIfElseIfElse(saison, temp) {
+    if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+            var phraseNew = document.write('<p>4 - Nous sommes au ' + saison + ' et il fait ' + temp + '°.</p>');// exécute ce bloc de code
+        } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon soit l'un ou l'autre
+            var phraseNew = document.write('<p>4 - Nous sommes en ' + saison + ' et il fait ' + temp + '°.</p>');// exécute cet autre bloc
+        } else {
+            var phraseNew = document.write('<p>4 - La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+        }//fin if else if else
+    return phraseNew;
+}//fin fonction
+meteoIfElseIfElse(saison, temp);
+
+function meteoFin (saison, temp) {
+var article2;//la variable article est vide et attend une condition 
+    if (saison == 'printemps') {// si c'est printemps
+        article2 = 'au ';//on affecte "au" à la variable
+    } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {
+        article2 = 'en ';//sinon on affecte en ...
+    } else {
+        return document.write('<p>5- La saison "' + saison + '" n\'existe pas .</p>');
+    }
+    //fin du if else
+    return document.write('5- Nous sommes ' + article2 + saison + ' et la température est de ' + temp + '°C.');
+}
+       meteoFin (saison, temp);
+
+// AVEC REPLACE (IF ELSE)
+// function meteo(saison, temp) {//Notre fonction avec 2 arguments qui viennent des var ci-dessus
+//     if (saison == 'printemps') {
+//     var phrase4 = document.write('<p>@@@@@ Nous sommes <span class="wordPrintemps">au</span> ' + saison + ' et il fait ' + temp + ' °C</p>');
+//     return phrase4;
+//     } else {
+//     var phrase4 = printemps.replace('en','<span class="wordPrintemps">au</span>');
+//     }
+// }
+
+document.write('<hr>')
+
+// Nouvelle condition
+    // 6 et 11 --> primaire
+    // 11 et 15 --> collège
+    // 15 et 18 --> lycée
+    // 18 ou + --> chômage
+
+    // function meteoFin (saison, temp) {
+    //la variable article est vide et attend une condition 
+
+var sonAge = prompt('Quel âge à votre enfant ?')
+
+function quelleEcole (sonAge) {
+    if (sonAge < 6) {
+        document.write ('Ton enfant à ' + sonAge + ' ans, il dois patienter pour aller à l\'école');
+
+    } else if (sonAge >= 6 && sonAge <= 11) {
+        var ecole = document.write( 'Votre enfant à ' + sonAge + ' ans. Il dois s\'inscrire en primaire'); 
+
+    } else if (sonAge >= 11 && sonAge <= 15) {
+        var ecole = document.write( 'Votre enfant à ' + sonAge + ' ans. Il dois s\'inscrire au collège');
+
+    } else if (sonAge >= 15 && sonAge <= 18) {
+        var ecole = document.write( 'Votre enfant à ' + sonAge + ' ans. Il dois s\'inscrire au lycée');
+
+    } else if (sonAge >= 18 ) {
+        var ecole = document.write( 'Votre enfant à ' + sonAge + ' ans. Il ne peut s\'incrire à aucun lycée. Essayez au Pole-Emploi.');
+
+    } else {
+        var ecole = document.write( 'Votre enfant à un bébé');
+        
+    } return ecole;
+} //fin de fonction
+
+quelleEcole(sonAge);
 
 </script>
     
