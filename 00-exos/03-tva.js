@@ -1,11 +1,11 @@
 // JS pour la page exercice TV 03 
 
-let priceHT = prompt('Montant du virement');
-let priceTTC = priceHT * 1.2
+let prixHT = prompt('Montant du virement');
+let prixTTC = prixHT * 1.2 ;
 
-// console.log(priceTTC);
+// console.log(prixTTC);
 
-alert('Vous avez décidez de virez ' + priceHT +  '\nLa transaction TTC sera de' + ' ' + priceTTC)
+alert('Vous avez décidez de virer ' + prixHT +  ' € \nVotre virement sera de ' + ' ' + prixTTC + ' € TTC');
 
-document.getElementById('resultPriceUser').innerHTML = 'Votre montant initial est de ' + priceHT + '<br> Avec une taxe de 20% <br>Le montant total sera de ' + priceTTC;
+document.getElementById('resultat').innerHTML = 'Votre montant initial est de ' + prixHT + '€ <br> Avec une taxe de 20% <br>Le montant total sera de ' + prixTTC + ' €';
 

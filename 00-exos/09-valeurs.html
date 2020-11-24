@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Baccalaureat</title>
+    <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Valeurs finales</h1>
+        <div id="contenu">
+        <h2>Examinez le programme valeurs.js ci-dessous :</h2>    
+        <ul>
+            <li>var nb1 = number(prompt("Entrez nb1:"))</li>
+            <li>var nb2 = number(prompt("Entrez nb2:"))</li>
+            <li>var nb3 = number(prompt("Entrez nb3:"))</li>
+        </ul>
+
+        <p>
+            <code>
+            if (nb1 > nb 2 ) {<br>
+                    nb1 = nb3 * 2 ;<br>
+                } else {<br>
+                    nb1++;<br>
+                    if (nb2 > nb3) {<br>
+                        nb1 = nb1 + nb3 * 3<br>
+                } else {<br>
+                    nb1 = 0 ;<br>
+                    nb3 = nb3 * 2 + nb2;<br>
+                }
+            }
+            </code>
+        </p>
+        <p>avant de l'exécuter, tentez de prévoir les valeurs finales des variables nb1, nb2 et de ,nb3 en fonction de leurs valeurs initiales et complétez le tableau ci-dessous.</p>
+
+        <table>
+			<tr>
+				<th>valeurs initiales</th>
+				<th>valeur finale nb1</th>
+				<th>valeur finale nb2</th>
+				<th>valeur finale nb3</th>
+			</tr>
+			<tr>
+				<td>Ex. si nb1, nb2 & nb3 valent tous 7</td>
+				<td id="nb1"></td>
+				<td id="nb2"></td>
+				<td id="nb3"></td>
+			</tr>
+			<tr>
+				<td>Si nb1, nb2 & nb3 valent tous 4</td>
+				<td>0</td>
+				<td>4</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>Si nb1 = 4, nb2 = 3, nb3 = 2</td>
+				<td>4</td>
+				<td>3</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Si nb1 = 2, nb2 = 4, nb3 = 0</td>
+				<td>3</td>
+				<td>4</td>
+				<td>0</td>
+			</tr>
+		</table>
+        </div> <!-- fin de contenu -->
+        <div class="contenu">
+            <h3>Résultat :</h3>
+            <p id="r1"></p>
+            <p id="r2"></p>
+            <p id="r3"></p>
+        </div>
+    </div><!-- fin de wrapper -->
+
+
+    <script src="09-valeurs.js"></script>
+</body>
+</html>
