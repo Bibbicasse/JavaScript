@@ -17,3 +17,7 @@ let utilisateur = {
 }
 utilisateur.bonjour();
 console.info(typeof (utilisateur));
+
+function bonjour() {
+    alert('J\'ai ' + this.age + ' ans, et mon prénom est '+ this.nom[0] + ' ' + this.nom[2] + '.')// indice 2 pour Hugo 
+}
