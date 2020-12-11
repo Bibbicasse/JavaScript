@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Chi Fou Mi</title>
+    <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+.box {
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  padding : 10px ;
+}
+button {
+  padding : 10px;
+  margin : 10px;
+  border-radius : 3px;
+  outline : none;
+  border : none;
+  color : #fff;
+  background-color : blue;
+  cursor: pointer;
+  transition : 0.2s;
+}
+
+button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+button:active {
+  transform : scale(0.97);
+}
+.resultat {
+  border : solid black 1px;
+  height : 50px;
+  text-align : center;
+  font-weight: bold;
+  padding : 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Exo 20 - Chi Fou Mi</h1>
+        <div id="contenu">
+           <p>L'utilisateur choisit dans un prompt du navigateur, pierre, feuille ou ciseau, l'ordinateur choisit aléatoirement l'une des trois possibilités, et la partie commence !</p>
+        </div> <!-- fin de contenu -->
+        <div id="contenu">
+            <h2>Remarque</h2>
+            <ul>
+                <li>On doit pouvoir indifféremment saisir le mot en minuscules comme en majuscules</li>
+                <li>Le ciseau est écrasé par la pierre</li>
+                <li>La feuille est découpée par le ciseau.</li>
+                <li>La pierre est enveloppée par la feuille.</li>
+                <li>Si le joueur et l'ordinateur font le même choix, on obtient une égalité.</li>
+                <p>Jouons à Chifoumi <br> choisi un bouton</p>
+                
+                <div class="box">
+                <button>Pierre</button>
+                  <button>Feuilles</button>
+                  <button>Ciseaux</button>
+                  </div>
+                  
+                  <div class="resultat"></div>
+            </ul>
+        </div>
+    </div><!-- fin de wrapper -->
+    
+
+
+    <script src="20-pierre.js"></script>
+    <!-- <script src="20-pierre_patrick.js"></script> -->
+</body>
+</html>

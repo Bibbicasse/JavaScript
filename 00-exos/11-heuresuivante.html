@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Heure suivante</title>
+    <!-- MES STYLES -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head><
+<body>
+    <div id="wrapper">
+        <h1>11 - Heure suivante</h1>
+        <div id="contenu">
+           <p>Écrivez un programme qui demande une heure à un utilisateur sous la forme de trois informations(heures, minutes puis les secondes).</p>
+           <p>Le programme affiche ensuite l'heure qu'il sera une seconde plus tard</p>
+           <p>Les erreurs de saisie doivent être gérées.</p>
+           <div>
+               <p>ATTENTION ! Ce programme est moins simple qu'il en à l'air</p>
+               <ul>
+                   <li>14 h 17 min 59 sec => 14 h 18 min 00 sec</li>
+                   <li>6 h 59 min 59 sec => 7 h 0 min 0 sec</li>
+                   <li>23 h 59 min 59 sec => 0h 0 min 0 sec (minuit)</li>
+               </ul>
+           </div>
+        </div> <!-- fin de contenu -->
+        <div id="contenu">
+            <h2>Résultat</h2>
+           <p id="resultat"></p>
+           <p id="resultatPLus1"></p>
+          
+        </div>
+    </div><!-- fin de wrapper -->
+    <script src="11-heuresuivante.js"></script>
+</body>
+</html>
