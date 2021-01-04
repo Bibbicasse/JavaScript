@@ -5,17 +5,23 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- Cette Meta vienn de Bootstrap et comporte une valeur supplémentaire "Shrink-to-fit=no" cela concerne les mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>JS - VIII 02 - Diaporama avec setInterval()</title>
+    <title>JS - VIII 05 - Toggle</title>
 
     <!-- CSS de Bootstap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- <script src="06-selecteurs.js" ></script> MON SCRIPT -->
+ 
+    <!-- MES STYLES -->
+<link rel="stylesheet" href="../css/navbar.css">
+<style>
+    /* class pour l'image */
+    .cache{
+        display: none;
+    }
+</style>
+   
 
-    <!-- Mes Styles -->
-    <style>
-
-    </style>
-    <script src="setInterval.js" async></script>
+    <!-- <script src=".js" async></script> -->
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -36,7 +42,7 @@
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="08-02_set-interval.html" tabindex="-1" aria-disabled="true">SetInterval</a>
+                <a class="nav-link active" href="08-05_toggle.html" tabindex="-1" aria-disabled="true">Toggle</a>
               </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -56,28 +62,25 @@
       </nav>
     <section class="jumbotron"> 
         <!-- En-tête typique de bootstrap -->
-        <h1 class="display-4" id="titreNiveau1">JS - VIII 02 - Diaporama avec setInterval</h1>
-        <p class="lead ma-classe">3 - setInterval en JS</p>
+        <h1 class="display-4" id="titreNiveau1">JS - VIII 05 - Toggle</h1>
+        <p class="lead ma-classe">Un Toggle</p>
     </section>
 
     <div class="container border border-primary p-4">
-        <div class="row border border-danger  m-2 p-2"> <!-- row -->
-            <div class="col-6 border border-danger p-4">
-                <h2 id="titre2">1 - </h2>
-                <p></p>
-                
-            </div>
-            <div class="col-6">
-                <div id="diaporama1" class="border border-danger">
-                    <img class="img-fluid" src="img/1.jpg" alt="Vivre l'herbe" id="imgDiapo">
-                </div><!-- fin de diaporama -->
-            </div><!-- fin de col diaporama -->
-        </div> <!-- fin de row -->
+        <div class="row justify-content-center m-2 p-2">
+            <div class="col-6 text-center" >
+                <button type="button" class="btn btn-block btn-outline-success" id="cacheImage">Afficher l'image</button>        
+            </div> <!-- FIN DE COL-->
+            
+        </div> <!-- FIN DE ROW-->
 
-        
-   
-          
-    </div><!-- Fin de container -->
+        <div class="row">
+            <div class="col-12 cache">
+                <img src="img/paris-1225923_1280.jpg" alt="paris" class="img-fluid">
+            </div>
+        </div>
+       
+    </div><!-- FIN DE CONTAINER -->
 
 
 <!-- Le JS de bootstrap est optionnel -->
@@ -88,27 +91,20 @@
 
 <!-- Mes scripts -->
 <script>
+let bouton = document.getElementById('cacheImage');
+    // let bouton2 = document.querySelector('#cacheImage')
+    // console.log(bouton);
 
-// diaporama avec setInterval()
+    //getElementsByClassName retourne un tableau array, il faut donc préciser quel est l'index de l'élément visé
+    // let photo2 = document.getElementsByClassName('cache')[0];
+let photo = document.querySelector('.cache');
+    console.log(photo);
 
-let varImg = 0;
-console.log(typeof varImg, varImg);
+function cliqueBouton() {
+    photo.classList.toggle('cache');
+}
 
-// let test = imgDiapo.getAttribute('src');
-// console.log(testGet);
-
-let timer = window.setInterval('monDiaporama()',2000); //initialisation de timer avec setInterval ('nomdelafonction', temps en miliseconde)
-function monDiaporama() {
-    varImg += 1 ; //on affecte 1 et on incrémente
-    imgDiapo.setAttribute('src', 'img/' + varImg + '.jpg');//je confère, je définis, je met en place et j'appele les images par leur nom automatiquement
-    console.log('la varImg = ' + varImg);
-    if(varImg == 5) {
-        clearInterval(timer); //clearInterval permet de stopper dès que la variable est égale au nombre d'image dans le dossier
-    }
-}//fin de la fonction
-
-
+bouton.addEventListener('click', cliqueBouton);
 </script>
-
 </body>
 </html>
